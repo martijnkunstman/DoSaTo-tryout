@@ -1,0 +1,18 @@
+DO SAYLN("Hello world.");
+MAKE STRING name = "Martijn";
+DO SAYLN("Hello "+name);
+DO SAYLN(i*i) FOR (RANGE(10)=>i);
+// comment
+DO CLEAR();
+DO SAYLN(i) FOR (RANGE(10)=>i);
+DO { DO SAYLN(i); DO SAYLN(i); } FOR (RANGE(100)=>i);
+
+MAKE FUNC LONG factorial(LONG n) {
+    DO IF (n==0) THEN RETURN(1) ELSE RETURN(n*factorial(n-1));        
+};
+
+DO SAYLN(factorial(20));
+
+
+
+
