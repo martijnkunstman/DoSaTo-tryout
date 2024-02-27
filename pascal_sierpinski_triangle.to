@@ -1,0 +1,46 @@
+//pascal sierpinski triangle
+MAKE INT depth = 32;
+MAKE INT start = 1;
+MAKE ARRAY INT triangle = [depth];
+MAKE FUNC VOID generatePascalsTriangle (INT depth)
+{
+    SET triangle#0 = start;
+    DO showRow();
+};
+MAKE FUNC VOID showRow()
+{
+    DO SAYLN(triangle#0);
+};
+
+DO generatePascalsTriangle(depth);
+
+
+
+
+// const triangle = [];
+// function generatePascalsTriangle(numRows) {
+//   for (let i = 0; i < numRows; i++) {
+//     for (let j = i; j >= 0; j--) {
+//       if (j === i) {
+//         triangle[j] = 1;
+//       } else {
+//         triangle[j] = (triangle[j] || 0) + (triangle[j - 1] || 0);
+//       }
+//     }
+//     show();
+//   }
+// }
+// function show() {
+//   temp = [...triangle];
+//   for (let a = 0; a < temp.length; a++) {
+//     if (temp[a] % 2) {
+//       temp[a] = "X";
+//     } else {
+//       temp[a] = " ";
+//     }
+//   }
+//   console.log(temp.join(""));
+// }
+
+// const numRows = 32;
+// const pascalsTriangle = generatePascalsTriangle(numRows);
